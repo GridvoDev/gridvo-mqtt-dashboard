@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    name: gridvo-mqtt-dashboard
+  name: gridvo-mqtt-dashboard
+  namespace: gridvo
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        name: gridvo-mqtt-dashboard
+    spec:
+      containers:
+      - name: gridvo-mqtt-dashboard
+        image: 10.0.3.31:5000/gridvo/gridvo-mqtt-dashboard:dev
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9192
+        env:
+        - name: IS_DEBUG
+          value: "true"
+             
