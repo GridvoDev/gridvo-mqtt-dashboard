@@ -4,7 +4,8 @@ Ext.define('MqttDashboard.view.topic.TopicController', {
     init: function () {
         var mqttTopicTreeStore = Ext.data.StoreManager.lookup('MqttTopicTree');
         Ext.Ajax.request({
-            url: 'http://www.gridvo.com:9191/mqtt/topic-tree',
+            // url: 'http://www.gridvo.com:9191/mqtt/topic-tree',
+            url: 'http://117.27.142.62:9191/mqtt/topic-tree',
             success: function (response, opts) {
                 var topicRoot = {
                     expanded: true

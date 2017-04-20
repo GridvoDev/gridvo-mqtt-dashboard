@@ -10,6 +10,7 @@ Ext.define('MqttDashboard.store.topic.MqttPacket', {
             type: 'json',
             rootProperty: 'result.packets'
         },
-        url: 'http://www.gridvo.com:9191/mqtt/packets'
+        // url: 'http://www.gridvo.com:9191/mqtt/packets'
+        url: 'http://117.27.142.62:9191/mqtt/packets'
     }
 });
